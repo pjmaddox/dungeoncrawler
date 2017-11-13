@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
 
-namespace s3
+namespace DungeonCrawler
 {
 	public class GameManager_HandleCurosrLock : MonoBehaviour 
 	{

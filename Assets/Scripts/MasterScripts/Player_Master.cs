@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace s3
+namespace DungeonCrawler
 {
 	public class Player_Master : MonoBehaviour
     {

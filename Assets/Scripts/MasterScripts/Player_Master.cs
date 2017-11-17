@@ -14,6 +14,10 @@ namespace DungeonCrawler
 
         public event GeneralEventHandler EventPlayerToggledInventoryUi;
         public event GeneralEventHandler EventPlayerToggledMenuUi;
+        public event GeneralEventHandler EventPlayerLeveledUp;
+
+        public delegate void ExperienceEventHandler(int earnedValue);
+        public event ExperienceEventHandler EventPlayerEarnedExperience;
 
         public int playerId;
         public bool isInventoryVisible = false;
@@ -40,6 +44,18 @@ namespace DungeonCrawler
                 EventPlayerToggledMenuUi();
 
             isMenuVisible = !isMenuVisible;
+        }
+
+        public void CallEventPlayerEarnedExperience(int amountEarned)
+        {
+            if (EventPlayerEarnedExperience != null)
+                EventPlayerEarnedExperience(amountEarned);
+        }
+
+        public void CallEventPlayerLeveledUp()
+        {
+            if (EventPlayerLeveledUp != null)
+                EventPlayerLeveledUp();
         }
     }
 }

@@ -7,10 +7,7 @@ namespace DungeonCrawler
 	public class Weapon_Animator : MonoBehaviour 
 	{
         public Weapon_Master weaponMaster;
-        public AnimationClip FirstAttack;
-        public AnimationClip SecondAttack;
-        public AnimationClip ThirdAttack;
-        public AnimationClip StabAttack;
+        public Animator myAnimator;
 
         void OnEnable()
 		{
@@ -26,6 +23,11 @@ namespace DungeonCrawler
 		{
 
 		}
+
+        void BeginLungeAttack()
+        {
+
+        }
 
 		void Start () 
 		{

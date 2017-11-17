@@ -7,10 +7,6 @@ namespace DungeonCrawler
 	public class Weapon_Attack : MonoBehaviour 
 	{
         public Weapon_Master weaponMaster;
-        public AnimationClip FirstAttack;
-        public AnimationClip SecondAttack;
-        public AnimationClip ThirdAttack;
-        public AnimationClip StabAttack;
 
         void OnEnable()
 		{
@@ -37,5 +33,15 @@ namespace DungeonCrawler
 		{
 			
 		}
+
+        public void CheckForDamagedTargets() //Called by animator!!
+        {
+
+        }
+
+        void ApplyDamageToTargets()
+        {
+
+        }
 	}
 }

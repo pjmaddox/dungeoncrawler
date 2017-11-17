@@ -20,17 +20,31 @@ namespace DungeonCrawler
 
 		void SetInitialReferences()
 		{
-
-		}
-
-		void Start () 
-		{
-			
+            weaponMaster = GetComponent<Weapon_Master>();
 		}
 		
 		void Update () 
 		{
-			
+            CheckForAttack();
 		}
+
+        void CheckForAttack()
+        {
+            if (Input.GetButtonDown("Fire1"))
+                DetermineAttackType();
+        }
+
+        void DetermineAttackType()
+        {
+            //Check for lung attack
+            var verticalInput = Input.GetAxis("Vertical");
+            if (verticalInput < 0)
+                weaponMaster.CallEventPlayerLungeAttack();
+            else
+            {
+                weaponMaster.CallEventPlayerComboAttack();
+            }
+
+        }
 	}
 }
